@@ -10,9 +10,9 @@ TMDB_API_KEY = "YOUR_TMDB_API_KEY"
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
 
 def load_and_prepare_data():
-    movies_df = pd.read_csv("data/movies.csv")
-    tags_df = pd.read_csv("data/tags.csv")
-    links_df = pd.read_csv("data/links.csv")
+    movies_df = pd.read_csv("movies.csv")
+    tags_df = pd.read_csv("tags.csv")
+    links_df = pd.read_csv("links.csv")
 
     tags_grouped = tags_df.groupby('movieId')['tag'] \
         .apply(lambda tags: ' '.join(str(tag) for tag in tags if pd.notna(tag))).reset_index()
