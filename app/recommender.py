@@ -6,7 +6,7 @@ from sklearn.neighbors import NearestNeighbors
 from scipy.sparse import vstack
 from .model_utils import load_models, save_models
 
-TMDB_API_KEY = "YOUR_TMDB_API_KEY"
+TMDB_API_KEY = "bb22ff5ccc9a19ec56cf83148370714c"
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
 
 def load_and_prepare_data():
